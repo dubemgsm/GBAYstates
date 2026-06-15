@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAY States Educational Access Tracker</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-4">
+        <!-- Header -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">BAY States Educational Access Tracker</h1>
+        </header>
+
+        <!-- Summary Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-blue-500">
+                <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Total Schools</h2>
+                <p id="total-schools" class="text-3xl font-bold text-gray-800">0</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-red-500">
+                <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">High Risk Schools</h2>
+                <p id="high-risk-schools" class="text-3xl font-bold text-red-600">0</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-yellow-500">
+                <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider">Percentage Disrupted</h2>
+                <p id="disruption-percentage" class="text-3xl font-bold text-gray-800">0%</p>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div class="bg-white p-4 rounded-lg shadow-lg">
+            <div id="map" class="rounded border"></div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Application Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
